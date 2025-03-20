@@ -25,10 +25,16 @@ SECRET_KEY = 'django-insecure-gnokug^0*66v$p=nctt)=85a7^v8=&&#b43y$mf(t5sas8gem&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# The `ALLOWED_HOSTS = []` setting in Django is used to specify a list of host/domain names that this
+# Django site can serve. When DEBUG is set to False, Django will only allow requests with a Host
+# header that matches a host in this list.
 ALLOWED_HOSTS = []
 
 
 # Application definition
+# The `INSTALLED_APPS` setting in Django is a list of strings where each string represents a Django
+# application or module that is included in the project.
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -40,6 +46,9 @@ INSTALLED_APPS = [
     'minha_app',
 ]
 
+# The `MIDDLEWARE` setting in Django is a list of middleware classes that Django applies to incoming
+# HTTP requests before passing them to the appropriate view. Each middleware class performs a specific
+# function in the request-response cycle.
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -50,8 +59,14 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# The `ROOT_URLCONF = 'meu_projeto_async.urls'` setting in Django specifies the Python module where
+# URL patterns for the project are defined.
 ROOT_URLCONF = 'meu_projeto_async.urls'
 
+
+
+
+# The `TEMPLATES` setting in Django is used to configure how Django will load and render templates.
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -69,6 +84,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'meu_projeto_async.wsgi.application'
+ASGI_APPLICATION = 'meu_projeto_async.asgi.application'
 
 
 
