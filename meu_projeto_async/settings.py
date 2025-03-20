@@ -63,6 +63,9 @@ MIDDLEWARE = [
 # URL patterns for the project are defined.
 ROOT_URLCONF = 'meu_projeto_async.urls'
 
+
+
+
 # The `TEMPLATES` setting in Django is used to configure how Django will load and render templates.
 TEMPLATES = [
     {
@@ -81,6 +84,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'meu_projeto_async.wsgi.application'
+ASGI_APPLICATION = 'meu_projeto_async.asgi.application'
 
 
 
